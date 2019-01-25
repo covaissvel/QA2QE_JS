@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	 <style>
+				#header {
+				    border: 1px solid lightgrey;
+				    margin : -8px -8px 0;
+				    background-color: lightgrey;
+				 }
+		</style>
+		<script type="text/javascript">
+		function validate() {
+			var rePassword=document.getElementById("repassword");
+			var Password=document.getElementById("password");
+			if(rePassword.value==Password.value)
+				{
+				
+				var container = document.getElementById("message");
+                container.innerHTML = "<p style='color:green;'>Registration is successful</p><h2 style='color:green;'>Welcome to DATAX Shipping Company</h2>";
+				}
+			else
+				{
+				document.getElementById("errorMessage").style.display = "block";
+				}
+		}
+		
+		
+		</script>
+</head>
+    
+<body>
+    <div id="header">
+        <table style="width:100%">
+            <tr style="width:100%">
+                <td style="width:20%">
+                    <span>
+                        <img align="left" src="logo.jpeg" width="120px" height="120px">
+                    </span>
+                </td>    
+                <td style="width: 60%;">
+                    <span>
+                        <center>
+                            <h1>DATAX Shipping Company</h1>
+                        </center>
+                    </span>
+                </td>
+                <td style="width: 40%; padding-bottom: 7%;padding-left:5%;">
+                    <span>
+                        <a href="#" id="signup">Sign up</a>
+                        <a href="#" id="login" style="padding-left:30px">Log in</a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+		</div>	
+		
+			
+
+			<div id="message">
+    		 <h3>Registration Form</h3> 
+			 <div id="errorMessage" style="color:red;display: none;">
+			<p>Registration failed<br>
+			password and re-enter password doesn't match</p>
+			</div>
+              <label>Username:</label>
+    <input type="text" id="username"><br>
+    <label>Password</label>
+    <input type="password"  name="psw" id="password" required><br>
+
+    <label>Repeat Password:</label>
+    <input type="password"  name="psw-repeat" id="repassword" required><br>
+    
+     <label>Mobile Number:</label>
+    <input type="text"   id="mobile" required><br>
+          <button type="button" class="signupbtn" id="register" onclick="validate()" >Register</button>
+
+
+
+			</div>
+			
+		
+    </body>
+
+</html>

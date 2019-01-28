@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <style>
+        #header 
+        {
+            border: 1px solid lightgrey;
+            margin: -8px -8px 0;
+            background-color: lightgrey;
+        }
+        .important {
+            text-align: center;
+            vertical-align: middle;
+            padding: 1%;
+        }
+    </style>
+    <div id="header">
+        <table style="width:100%">
+            <tr style="width:100%">
+                <td style="width:20%">
+                    <span>
+    						<img align="left" src="logo.jpeg" width="120px" height="120px">
+						</span>
+                </td>
+                <td style="width: 60%;">
+                    <span>
+							<center>
+								<h1>DATAX Shipping Company</h1>
+							</center>
+						</span>
+                </td>
+                <td style="width: 40%; padding-bottom: 7%;padding-left:5%;">
+                    <span>
+							<a href="#" id="signup">Sign up</a>
+							<a href="#" id="login" style="padding-left:30px">Log in</a>
+						</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</head>
+
+<body >
+<div class="important">
+        <h3>Company Offers Discount</h3>
+    </div>
+     <div class="important">
+	 Enter the weight of the item
+        <input type="text" name="weight" id="weight">
+    </div>
+         <div class="important">
+Enter the distance
+        <input type="text" name="distance" id="distance">
+        <br>
+    </div>
+        <div class="important">
+        <button id="submit" onclick="myFunction()">Submit</button>
+    </div>
+    <div class="important" id="result"></div>
+
+   <script>
+   function myFunction(){
+     
+     var w1 = document.getElementById("weight").value;
+     var w = parseInt(w1);
+     var d1 = document.getElementById("distance").value;
+     var d = parseInt(d1);
+     
+     var text = "Datax shipping offers no discount";
+     
+     if(w >= 100 || d >= 500){
+       text = "Datax shipping company offers discount";
+     }
+     
+      document.getElementById("result").innerHTML = text;
+
+   }
+   
+   </script>
+
+</body>
+</html>

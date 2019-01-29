@@ -43,29 +43,38 @@
                     </td>
                 </tr>
             </table>
-        </div>
-		<div class="important">
+	</div>
+	<div class="important">
 			<h2 id="tag">Multiple Currency Converter</h2>
-		</div>
-		<div class="important">
+	</div>
+	<div class="important">
 		Select the conversion type
 			<select id="currency">
-				<option value="1">USD-INR</option>
+				<option value="1">USD - INR</option>
 				<option value="2">INR – USD</option>
 				<option value="3">EUR – INR</option>
 				<option value="4">INR – EUR</option>
 			</select>
-		</div>
-		<div class="important">
+	</div>
+	<div class="important">
 			Enter the value
 			<input type="text" name="value" id="value">
-		</div>
-		<div class="important">
-			<button id="submit" onclick="myFunction()">Submit</button>
-		</div>
-		<div class="important"></div>
-    </body>
-	</html>
+	</div>
+	<div class="important">
+			<button type="button" id="submit" onclick="myFunction()">Submit</button>
+	</div>
+	<div class="important" id="result"></div>
+	<script>
+	function myFunction(){
+		
+		var converter = document.getElementById('currency').value;
+		console.log(converter);
+	
+	
+	
+	}</script>
+</body>
+</html>
     
 
 	

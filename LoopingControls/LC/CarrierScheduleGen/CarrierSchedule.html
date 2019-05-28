@@ -1,0 +1,79 @@
+<html>
+<head>
+
+<style>
+#header {
+	border: 1px solid lightgrey;
+	margin: -8px -8px 0;
+	background-color: lightgrey;
+}
+</style>
+
+</head>
+
+<body>
+	<div id="header">
+		<table style="width: 100%">
+			<tr style="width: 100%">
+				<td style="width: 20%"><span> <img align="left"
+						src="logo.jpeg" width="120px" height="120px">
+				</span></td>
+				<td style="width: 60%;"><span>
+						<center>
+							<h1>DATAX Shipping Company</h1>
+						</center>
+				</span></td>
+				<td style="width: 40%; padding-bottom: 7%; padding-left: 5%;">
+					<span> <a href="#" id="signup">Sign up</a> <a href="#"
+						id="login" style="padding-left: 30px">Log in</a>
+				</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<table>
+		<tr>
+			<td><h2>Carrier Schedule Generator</h2></td>
+		</tr>
+		<tr>
+			<td>Start date(MM/dd/yyyy)</td>
+			<td><input type="text" id="date"></input></td>
+			<td><button type="submit" onclick="myFunction()" id="generate">Generate</button></td>
+		</tr>
+		<tr>
+			<td>Carrier schedule for the corresponding year<br>(dd/MM/yyyy)
+			</td>
+			<td><textarea rows="5" cols="50" id="scheduleDate"></textarea></td>
+		</tr>
+	</table>
+	<script>
+		function myFunction() {
+			var startDate = new Date(document.getElementById("date").value);
+			var dateList = [];
+			var nextYear = startDate.getFullYear() + 1;
+			while (true) {
+				startDate.setDate(startDate.getDate() + 15);
+				if (startDate.getDay() == 6) {
+					startDate.setDate(startDate.getDate() + 2);
+				} else if (startDate.getDay() == 0) {
+					startDate.setDate(startDate.getDate() + 1);
+				}
+				if (startDate.getFullYear() == nextYear) {
+					break;
+				} else {
+					var dd = String(startDate.getDate());
+					var mm = String(startDate.getMonth() + 1); //January is 0!
+					var yyyy = startDate.getFullYear();
+					dateList.push(dd + "/" + mm + "/" + yyyy);
+				}
+			}
+			var text = "";
+			for (i = 0; i < dateList.length; i++) {
+				text = text + dateList[i] + "\n"
+			}
+			document.getElementById("scheduleDate").value = text.trim();
+		}
+	</script>
+</body>
+</html>
+

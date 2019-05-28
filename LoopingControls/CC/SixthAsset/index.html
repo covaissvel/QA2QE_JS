@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+#header {
+	border: 1px solid lightgrey;
+	margin: -8px -8px 0;
+	background-color: lightgrey;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<table style="width: 100%">
+			<tr style="width: 100%">
+				<td style="width: 20%"><span> <img align="left"
+						src="logo.jpeg" width="120px" height="120px">
+				</span></td>
+				<td style="width: 60%;"><span>
+						<center>
+							<h1>DATAX Shipping Company</h1>
+						</center>
+				</span></td>
+				<td style="width: 40%; padding-bottom: 7%; padding-left: 5%;">
+					<span> <a href="#" id="signup">Sign up</a> <a href="#"
+						id="login" style="padding-left: 30px">Log in</a>
+				</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<table>
+		<tr>
+			<h2>6th Asset Id</h2>
+		</tr>
+		<tr>
+			<td>Start range id</td>
+			<td><input type="text" id="start_id"></input></td>
+		</tr>
+		<tr>
+			<td>End range id</td>
+			<td><input type="text" id="end_id"></input></td>
+		</tr>
+		<tr>
+			<td><button type="submit" id="calculate" onclick="myFunction()">Calculate</button></td>
+		</tr>
+		<tr>
+			<td>6thAsset id details<br>in that given range are :
+			</td>
+			<td><textarea rows="5" cols="50" id="output"></textarea></td>
+		</tr>
+	</table>
+	<script>
+		function myFunction() {
+			var srange = parseInt(document.getElementById("start_id").value);
+			var erange = parseInt(document.getElementById("end_id").value);
+			text = "";
+			var temp = srange -1;
+			var first = true;
+			while (true) {
+				temp = temp  + 6;
+				console.log(temp)
+				if (temp > erange) {
+					break;
+				} else {
+					if(first){
+						text = temp;
+						first = false;
+					}else{
+						text = text + "," + temp;
+						
+					}
+				}
+			}
+
+			document.getElementById("output").value = text;
+
+		}
+	</script>
+
+</body>
+</html>

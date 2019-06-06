@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="script.js" type="text/javascript">
+	
+</script>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td><h2>Shipping Cost</h2></td>
+		</tr>
+		<tr>
+			<td>Enter the Company Name</td>
+			<td><input type="text" id="companyName"></input></td>
+		</tr>
+		<tr>
+			<td>Enter the Cost</td>
+			<td><input type="text" id="cost"></input></td>
+		</tr>
+		<tr>
+		<td><button type="submit" id="add" onclick="addCompanyQuote()">Add Quote</button></td>
+		<td><button type="submit" id="low" onclick="displayLowestQuotedCompany()">Low Cost</button></td>
+		<td><button type="submit" id="high" onclick="displayHighestQuotedCompany()">High Cost</button></td>
+		<td><button type="submit" id="display" onclick="displayAll()">Display All</button></td>	
+		
+		</tr>
+		<tr><td><div id="result" style="display: none;"></div></td></tr>
+	</table>
+
+</body>
+</html>

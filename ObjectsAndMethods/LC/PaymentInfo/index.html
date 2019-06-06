@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+</style>
+<script src="script.js" type="text/javascript">
+	
+</script>
+
+
+</head>
+<body>
+	<div id="payment">
+		<table>
+			<tr>
+				<td><h2>Payment Processing</h2></td>
+			</tr>
+			<tr>
+				<td>Payment Option</td>
+				<td><select id="paymentOption">
+						<option value="please">Please select</option>
+						<option value="credit">Credit card</option>
+						<option value="debit">Debit card</option>
+				</select></td>
+				<td><div id="optionWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td>Card Type</td>
+				<td><select id="cardType">
+						<option value="please">Please select</option>
+						<option value="visa">Visa</option>
+						<option value="master">Master Card</option>
+				</select></td>
+				<td><div id="typeWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td>Card Number</td>
+				<td><input id="cardNumber" type="text"></input></td>
+				<td><div id="cardWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td>CVV</td>
+				<td><input id="cvv" type="text"></input></td>
+				<td><div id="cvvWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td>Expire Date</td>
+				<td><input id="expireDate" type="text" placeHolder="mm/dd/yyyy"></input></td>
+				<td><div id="dateWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td>Amount</td>
+				<td><input id="amount" type="text"></input></td>
+				<td><div id="amountWarning" style="display: none;"></div></td>
+			</tr>
+			<tr>
+				<td><button type="submit" id="proceed" onclick="validate()">Proceed
+						Payment</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+
+</head>
+<body onload="populateLicenceDetails()">
+
+	<table>
+		<tr>
+			<td><h2>Software Licence Details</h2></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td>Amount</td>
+		</tr>
+		<tr>
+			<td><select id="licenseName" onchange="getLicence()"></select></td>
+			<td><input type="text" id="amount"></input></td>
+		</tr>
+		<tr>
+			<td>Number of Licences</td>
+		</tr>
+		<tr>
+			<td><input id="quantity" type="text" onkeyup="compute()"></input></td>
+		</tr>
+		<tr>
+			<td><div id="result" style="display: none;"></div></td>
+		</tr>
+	</table>
+
+	<script src="script.js"></script>
+</body>
+</html>
